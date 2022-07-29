@@ -1,0 +1,26 @@
+@use '/src/styles/constants/colors';
+
+.btn {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: colors.$WHITE;
+  background-color: colors.$GRAY;
+  border-radius: 10px;
+
+  &.isCorrect {
+    color: colors.$PRIMARY;
+    background-color: colors.$WHITE;
+    border: 1px solid colors.$PRIMARY;
+  }
+
+  &.isActive {
+    color: colors.$WHITE;
+    background-color: colors.$PRIMARY;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

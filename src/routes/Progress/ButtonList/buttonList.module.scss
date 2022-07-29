@@ -1,0 +1,15 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+
+.buttonList {
+  @include flexbox.flexbox('center', 'inherit');
+  margin-top: 35px;
+
+  button {
+    margin-left: 20px;
+  }
+
+  button:first-child {
+    margin: 0;
+  }
+}

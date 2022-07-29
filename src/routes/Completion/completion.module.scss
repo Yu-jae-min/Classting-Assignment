@@ -1,0 +1,48 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+
+.completion {
+  @include flexbox.columnFlexbox('center', 'between');
+  width: 100%;
+  max-width: 700px;
+  height: calc(100vh - 60px);
+
+  .rateWrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+
+    .rateItem {
+      @include flexbox.columnFlexbox('center', 'center');
+
+      .title {
+        font-size: 16px;
+      }
+
+      .data {
+        margin-top: 20px;
+        font-size: 70px;
+      }
+
+      &:nth-child(2) {
+        .data {
+          color: colors.$PRIMARY;
+        }
+      }
+    }
+  }
+
+  .buttonWrap {
+    @include flexbox.flexbox('center', 'center');
+    margin-top: 70px;
+
+    button {
+      margin-left: 20px;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use '/src/styles/mixins/flexbox';
+
+.progressList {
+  .progressRate {
+    @include flexbox.flexbox('between', 'inherit');
+    margin-bottom: 15px;
+  }
+}

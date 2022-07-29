@@ -1,3 +1,5 @@
+@use '/src/styles/constants/colors';
+
 html,
 body,
 div,
@@ -83,8 +85,22 @@ video {
   margin: 0;
   font: inherit;
   font-size: 100%;
+  color: colors.$BLACK;
   vertical-align: baseline;
   border: 0;
+}
+
+a {
+  color: colors.$BLACK;
+  text-decoration: none;
+  outline: none;
+
+  &:active,
+  &:hover,
+  &:visited,
+  &:link {
+    text-decoration: none;
+  }
 }
 
 /* HTML5 display-role reset for older browsers */

@@ -1,0 +1,45 @@
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+
+.incorrectNote {
+  @include flexbox.columnFlexbox('center', 'center');
+  max-width: 1280px;
+
+  .contentWrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+  }
+
+  .itemList {
+    margin: 50px 20px 0;
+
+    &:first-child,
+    &:nth-child(2) {
+      margin-top: 100px;
+    }
+  }
+
+  .buttonWrap {
+    margin: 100px 0;
+  }
+
+  @include responsive.mobileOnly {
+    .contentWrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .itemList {
+      margin: 30px 10px 0;
+
+      &:first-child,
+      &:nth-child(2) {
+        margin-top: 50px;
+      }
+    }
+
+    .buttonWrap {
+      margin: 50px 0;
+    }
+  }
+}

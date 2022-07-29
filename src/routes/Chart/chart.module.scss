@@ -1,0 +1,45 @@
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+
+.chart {
+  @include flexbox.columnFlexbox('center', 'center');
+  height: calc(100vh - 60px);
+
+  .title {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: center;
+
+    @include responsive.mobileOnly {
+      font-size: 35px;
+    }
+  }
+
+  .chartWrap {
+    width: 100%;
+  }
+
+  .buttonWrap {
+    margin: 100px 0;
+  }
+
+  @include responsive.mobileOnly {
+    .contentWrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .itemList {
+      margin: 30px 10px 0;
+
+      &:first-child,
+      &:nth-child(2) {
+        margin-top: 50px;
+      }
+    }
+
+    .buttonWrap {
+      margin: 50px 0;
+    }
+  }
+}

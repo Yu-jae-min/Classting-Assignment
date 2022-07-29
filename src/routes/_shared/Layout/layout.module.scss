@@ -1,0 +1,16 @@
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/constants/colors';
+
+.layout {
+  height: 100vh;
+
+  .wrapper {
+    @include flexbox.flexbox('center', 'center');
+
+    .main {
+      @include flexbox.flexbox('center', 'center');
+      width: 1280px;
+      padding: 0 20px;
+    }
+  }
+}
