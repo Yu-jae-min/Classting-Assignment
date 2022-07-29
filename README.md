@@ -6,7 +6,7 @@
 
 ## 🎉 **배포 주소**
 
-- [https://](https://)
+- [https://random-quiz-game.netlify.app/](https://random-quiz-game.netlify.app/)
 
 <br />
 
@@ -114,6 +114,6 @@ yarn start
 
 ### # 배포
 
-- [ ] 배포
+- [x] 배포
 
 <br>
