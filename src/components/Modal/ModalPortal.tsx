@@ -1,4 +1,5 @@
 import ReactDom from 'react-dom';
+
 import { IModalPortalType } from 'types/types';
 
 const ModalPortal = ({ children }: IModalPortalType) => {

@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { IGetQuizListApiType } from 'types/types';
 
 const BASE_URL = `https://opentdb.com/api.php`;

@@ -1,5 +1,7 @@
 import cx from 'classnames';
+
 import { IQuestionBtnType } from 'types/types';
+
 import styles from './questionButton.module.scss';
 
 const QuestionButton = (props: IQuestionBtnType) => {

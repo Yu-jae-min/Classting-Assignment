@@ -1,6 +1,8 @@
 import QuestionButton from 'components/Quiz/QuestionButton/QuestionButton';
-import styles from './questionList.module.scss';
+
 import { IQuestionListType } from 'types/types';
+
+import styles from './questionList.module.scss';
 
 const QuestionList = (props: IQuestionListType) => {
   const { randomOrder, btnActive, showCorrect, defaultItemList, quizNum, toggleActive } = props;

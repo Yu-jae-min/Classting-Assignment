@@ -1,4 +1,5 @@
 import { IQuizModalType } from 'types/types';
+
 import styles from './quizmodal.module.scss';
 
 const QuizModal = ({ onClose }: IQuizModalType) => {

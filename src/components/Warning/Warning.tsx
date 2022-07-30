@@ -1,5 +1,6 @@
-import styles from './warning.module.scss';
 import { IWarningType } from 'types/types';
+
+import styles from './warning.module.scss';
 
 export enum ErrorMessage {
   Loading = `로딩 중.. 잠시만 기다려주세요!`,

@@ -1,5 +1,7 @@
 import cx from 'classnames';
+
 import { IButtonType } from 'types/types';
+
 import styles from './button.module.scss';
 
 const Button = ({ desc, size, onClick, isActive, disabled }: IButtonType) => {

@@ -1,1 +1,1 @@
-export { ReactComponent as HeaderLogo } from './headerLogo.svg';
+export { ReactComponent as Logo } from './Logo.svg';

@@ -1,5 +1,7 @@
 import QuestionTitle from 'components/Quiz/QuestionTitle/QuestionTitle';
+
 import { IProgressListType } from 'types/types';
+
 import styles from './progressList.module.scss';
 
 const ProgressList = ({ count, quizNum, title }: IProgressListType) => {

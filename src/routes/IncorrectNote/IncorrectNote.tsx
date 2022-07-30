@@ -1,23 +1,21 @@
+import Button from 'components/Button/Button';
 import QuestionButton from 'components/Quiz/QuestionButton/QuestionButton';
+import QuestionTitle from 'components/Quiz/QuestionTitle/QuestionTitle';
+import Warning, { ErrorMessage } from 'components/Warning/Warning';
+
+import useNavigation from 'hooks/useNavigation';
 
 import { useRecoilValue } from 'recoil';
 import { incorrectNoteList } from 'states/atom';
 
-import QuestionTitle from 'components/Quiz/QuestionTitle/QuestionTitle';
-
-import Warning, { ErrorMessage } from 'components/Warning/Warning';
-
-import styles from './incorrectNote.module.scss';
 import { IItemType } from 'types/types';
 
-import Button from 'components/Button/Button';
-
-import useMovePage from 'hooks/useMovePage';
+import styles from './incorrectNote.module.scss';
 
 const IncorrectNote = () => {
   const incorrectItem = useRecoilValue(incorrectNoteList);
 
-  const { moveThePage } = useMovePage();
+  const { navigation } = useNavigation();
 
   return (
     <div className={styles.incorrectNote}>
@@ -40,7 +38,7 @@ const IncorrectNote = () => {
           })}
       </div>
       <div className={styles.buttonWrap}>
-        <Button desc='홈으로' size='normal' onClick={() => moveThePage('/')} />
+        <Button desc='홈으로' size='normal' onClick={() => navigation('/')} />
       </div>
     </div>
   );

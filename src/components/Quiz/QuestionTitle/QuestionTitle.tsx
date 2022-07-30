@@ -1,4 +1,5 @@
 import { IQuestionTitleType } from 'types/types';
+
 import styles from './questionTitle.module.scss';
 
 const QuestionTitle = ({ title }: IQuestionTitleType) => {

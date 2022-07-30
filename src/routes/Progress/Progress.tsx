@@ -3,13 +3,12 @@ import { useEffect, useState, useCallback, useMemo } from 'react';
 import ModalPortal from 'components/Modal/ModalPortal';
 import QuizModal from 'components/Modal/QuizModal/QuizModal';
 import Warning, { ErrorMessage } from 'components/Warning/Warning';
-
 import QuestionList from './QuestionList/QuestionList';
 import ButtonList from './ButtonList/ButtonList';
 import ProgressList from './ProgressList/ProgressList';
 
 import useTimeCount from 'hooks/useTimeCount';
-import useMovePage from 'hooks/useMovePage';
+import useNavigation from 'hooks/useNavigation';
 
 import { getQuizListApi } from 'services/api';
 
@@ -39,7 +38,7 @@ const Progress = () => {
   const resetTime = useResetRecoilState(timeCount);
   const resetCorrect = useResetRecoilState(correctCount);
 
-  const { moveThePage } = useMovePage();
+  const { navigation } = useNavigation();
   const { count } = useTimeCount();
 
   // 버튼 활성화
@@ -151,7 +150,7 @@ const Progress = () => {
     const checkValue = value === '결과 보기';
     const condition = checkValue && lastQuestion && btnActive;
 
-    if (condition) moveThePage('/completion');
+    if (condition) navigation('/completion');
   };
 
   // 결과보기 버튼 클릭 시
@@ -166,7 +165,7 @@ const Progress = () => {
   const giveUpQuiz = () => {
     resetTime();
     resetCorrect();
-    moveThePage('/');
+    navigation('/');
   };
 
   return (

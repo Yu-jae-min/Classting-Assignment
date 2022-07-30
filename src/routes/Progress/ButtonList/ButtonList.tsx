@@ -1,6 +1,8 @@
 import Button from 'components/Button/Button';
-import styles from './buttonList.module.scss';
+
 import { IButtonListType } from 'types/types';
+
+import styles from './buttonList.module.scss';
 
 const ButtonList = (props: IButtonListType) => {
   const { lastQuestion, btnActive, goToNextQuiz, finishQuiz, showCorrectAnswer, giveUpQuiz } = props;

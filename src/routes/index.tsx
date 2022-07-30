@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Layout from './_shared/Layout/Layout';
+import Layout from '../components/_shared/Layout/Layout';
 import Home from './Home/Home';
 import Progress from './Progress/Progress';
 import Completion from './Completion/Completion';

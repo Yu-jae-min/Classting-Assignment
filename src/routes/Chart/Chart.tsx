@@ -1,20 +1,20 @@
 import { VictoryAxis, VictoryBar, VictoryChart, VictoryLine, VictoryScatter } from 'victory';
 import { BAR_STYLE, LINE_STYLE, SCATTER_STYLE, AXIS_STYLE } from './chartStyle';
 
+import Button from 'components/Button/Button';
+import Warning, { ErrorMessage } from 'components/Warning/Warning';
+
+import useNavigation from 'hooks/useNavigation';
+
 import { useRecoilValue } from 'recoil';
 import { totalScore } from 'states/atom';
 
 import styles from './chart.module.scss';
 
-import useMovePage from 'hooks/useMovePage';
-
-import Button from 'components/Button/Button';
-import Warning, { ErrorMessage } from 'components/Warning/Warning';
-
 const Chart = () => {
   const chartData = useRecoilValue(totalScore);
 
-  const { moveThePage } = useMovePage();
+  const { navigation } = useNavigation();
 
   const correctData = chartData[0].value;
   const incorrectData = chartData[1].value;
@@ -44,7 +44,7 @@ const Chart = () => {
         </div>
       )}
       <div className={styles.buttonWrap}>
-        <Button desc='홈으로' size='normal' onClick={() => moveThePage('/')} />
+        <Button desc='홈으로' size='normal' onClick={() => navigation('/')} />
       </div>
     </div>
   );
