@@ -1,8 +1,13 @@
 @use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/fontsize';
 
 .progressList {
-  .progressRate {
+  .contentsWrap {
     @include flexbox.flexbox('between', 'inherit');
     margin-bottom: 15px;
+  }
+
+  .title {
+    @include fontsize.titleMideum;
   }
 }

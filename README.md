@@ -58,9 +58,11 @@ yarn start
 
 ## 📒 **구현 목록**
 
-|메인|퀴즈 풀기|오답 노트|차트 보기|
-|:-:|:-:|:-:|:-:|
-|||||
+|메인|퀴즈 풀기|
+|:-:|:-:|
+|![메인](https://user-images.githubusercontent.com/85284246/181919905-5dab08bb-6075-4db9-a927-df81d970fc2f.png)|![퀴즈풀기](https://user-images.githubusercontent.com/85284246/181919936-43ed8aaa-f7f4-408e-baff-fa63a842c0b1.png)|
+|오답 노트|차트 보기|
+|![오답노트](https://user-images.githubusercontent.com/85284246/181919921-43b78bed-3046-4001-b525-5a86735dc2d0.png)|![차트보기](https://user-images.githubusercontent.com/85284246/181919928-db15eeed-c976-4a73-b792-7a59deee58c1.png)|
 
 <br />
 

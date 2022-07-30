@@ -1,22 +1,39 @@
 @use '/src/styles/mixins/flexbox';
 @use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/fontsize';
 
 .incorrectNote {
   @include flexbox.columnFlexbox('center', 'center');
   max-width: 1280px;
 
-  .contentWrap {
+  .container {
+    @include flexbox.columnFlexbox('center', 'center');
+
+    &.empty {
+      height: calc(100vh - 60px);
+    }
+  }
+
+  .warningWrap {
+    @include flexbox.columnFlexbox('center', 'center');
+  }
+
+  .contentsWrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: end;
-  }
 
-  .itemList {
-    margin: 50px 20px 0;
+    .itemList {
+      margin: 50px 20px 0;
 
-    &:first-child,
-    &:nth-child(2) {
-      margin-top: 100px;
+      &:first-child,
+      &:nth-child(2) {
+        margin-top: 100px;
+      }
+
+      .title {
+        @include fontsize.titleMideum;
+      }
     }
   }
 
@@ -25,7 +42,7 @@
   }
 
   @include responsive.mobileOnly {
-    .contentWrap {
+    .contentsWrap {
       grid-template-columns: repeat(2, 1fr);
     }
 

@@ -5,7 +5,7 @@ export interface IGetQuizListApiType {
   difficulty: 'easy' | 'medium' | 'hard';
 }
 
-export interface IItemType {
+export interface IQuestionItemType {
   category: string;
   correct_answer: string;
   difficulty: string;
@@ -15,21 +15,15 @@ export interface IItemType {
 }
 
 export interface IQuestionListType {
-  randomOrder: string[];
-  btnActive: string;
-  showCorrect: boolean;
-  defaultItemList: IItemType[];
-  quizNum: number;
-  toggleActive: MouseEventHandler;
+  questionValue: string;
+  isShowCorrect: boolean;
+  questionList: IQuestionItemType[];
+  questionCount: number;
+  activeQuestionCard: MouseEventHandler;
 }
 
 export interface IProgressListType {
-  count: number;
-  quizNum: number;
-  title: string;
-}
-
-export interface IQuestionTitleType {
+  questionCount: number;
   title: string;
 }
 
@@ -44,7 +38,7 @@ export interface IQuestionBtnType {
   children?: ReactNode;
 }
 
-export interface IQuizModalType {
+export interface IQuestionModalType {
   onClose: MouseEventHandler;
 }
 
@@ -65,10 +59,9 @@ export interface IWarningType {
 }
 
 export interface IButtonListType {
-  lastQuestion: boolean;
-  btnActive: boolean;
-  goToNextQuiz: MouseEventHandler;
-  finishQuiz: MouseEventHandler;
-  showCorrectAnswer: MouseEventHandler;
-  giveUpQuiz: MouseEventHandler;
+  limitQuestion: boolean;
+  isActive: boolean;
+  goToPage: MouseEventHandler;
+  isQuestionFinish: MouseEventHandler;
+  openCorrect: MouseEventHandler;
 }

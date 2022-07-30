@@ -1,10 +1,10 @@
 import { useRef, useEffect } from 'react';
 
 import { useRecoilState } from 'recoil';
-import { timeCount } from 'states/atom';
+import { timeCountState } from 'states/atom';
 
 const useTimeCount = () => {
-  const [count, setCount] = useRecoilState(timeCount);
+  const [count, setCount] = useRecoilState(timeCountState);
 
   const ref = useRef(0);
 

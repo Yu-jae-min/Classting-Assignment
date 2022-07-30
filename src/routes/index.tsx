@@ -2,20 +2,20 @@ import { Route, Routes } from 'react-router-dom';
 
 import Layout from '../components/_shared/Layout/Layout';
 import Home from './Home/Home';
-import Progress from './Progress/Progress';
-import Completion from './Completion/Completion';
+import QuestionProgress from './QuestionProgress/QuestionProgress';
+import QuestionFinish from './QuestionFinish/QuestionFinish';
 import IncorrectNote from './IncorrectNote/IncorrectNote';
-import Chart from './Chart/Chart';
+import CompareChart from './CompareChart/CompareChart';
 
 const App = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path='/' element={<Home />} />
-        <Route path='/progress' element={<Progress />} />
-        <Route path='/completion' element={<Completion />} />
+        <Route path='/questionProgress' element={<QuestionProgress />} />
+        <Route path='/questionFinish' element={<QuestionFinish />} />
         <Route path='/incorrectNote' element={<IncorrectNote />} />
-        <Route path='/chart' element={<Chart />} />
+        <Route path='/compareChart' element={<CompareChart />} />
       </Route>
     </Routes>
   );

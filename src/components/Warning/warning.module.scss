@@ -1,8 +1,10 @@
+@use '/src/styles/mixins/fontsize';
+
 .warning {
   width: 100%;
   text-align: center;
 
   .title {
-    font-weight: bold;
+    @include fontsize.titleSmall;
   }
 }

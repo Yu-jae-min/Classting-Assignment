@@ -2,16 +2,16 @@ import cx from 'classnames';
 
 import { IQuestionBtnType } from 'types/types';
 
-import styles from './questionButton.module.scss';
+import styles from './questionCard.module.scss';
 
-const QuestionButton = (props: IQuestionBtnType) => {
+const QuestionCard = (props: IQuestionBtnType) => {
   const { uniqueKey, className, isActive, isCorrect, value, onClick, disabled, children } = props;
 
   return (
     <button
       key={uniqueKey}
       type='button'
-      className={cx(styles.btn, className, { [styles.isActive]: isActive, [styles.isCorrect]: isCorrect })}
+      className={cx(styles.questionCard, className, { [styles.isActive]: isActive, [styles.isCorrect]: isCorrect })}
       value={value}
       onClick={onClick}
       disabled={disabled}
@@ -21,4 +21,4 @@ const QuestionButton = (props: IQuestionBtnType) => {
   );
 };
 
-export default QuestionButton;
+export default QuestionCard;

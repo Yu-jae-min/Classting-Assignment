@@ -1,10 +1,10 @@
-import { IQuizModalType } from 'types/types';
+import { IQuestionModalType } from 'types/types';
 
-import styles from './quizmodal.module.scss';
+import styles from './questionModal.module.scss';
 
-const QuizModal = ({ onClose }: IQuizModalType) => {
+const QuestionModal = ({ onClose }: IQuestionModalType) => {
   return (
-    <div className={styles.quizModal}>
+    <div className={styles.questionModal}>
       <div className={styles.content}>
         <h1 className={styles.title}>경고 !</h1>
         <p className={styles.desc}>보기 중 하나의 답을 선택해주세요.</p>
@@ -16,4 +16,4 @@ const QuizModal = ({ onClose }: IQuizModalType) => {
   );
 };
 
-export default QuizModal;
+export default QuestionModal;

@@ -3,27 +3,27 @@ import { recoilPersist } from 'recoil-persist';
 
 const { persistAtom } = recoilPersist();
 
-export const correctCount = atom({
-  key: 'correctCount',
+export const correctCountState = atom({
+  key: 'correctCountState',
   default: 0,
 });
 
-export const incorrectCount = selector({
-  key: 'incorrectCount',
+export const incorrectCountState = selector({
+  key: 'incorrectCountState',
   get: ({ get }) => {
-    const correctCountValue = get(correctCount);
+    const correctCountValue = get(correctCountState);
 
     return 10 - correctCountValue;
   },
 });
 
-export const timeCount = atom({
-  key: 'timeCount',
+export const timeCountState = atom({
+  key: 'timeCountState',
   default: 0,
 });
 
-export const totalScore = atom({
-  key: 'totalScore',
+export const totalScoreState = atom({
+  key: 'totalScoreState',
   default: [
     { category: 'correct', value: 0 },
     { category: 'incorrect', value: 0 },
@@ -31,8 +31,8 @@ export const totalScore = atom({
   effects_UNSTABLE: [persistAtom],
 });
 
-export const incorrectNoteList = atom({
-  key: 'incorrectNoteList',
+export const incorrectNoteState = atom({
+  key: 'incorrectNoteState',
   default: [],
   effects_UNSTABLE: [persistAtom],
 });

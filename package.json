@@ -17,6 +17,7 @@
     "recoil": "^0.7.4",
     "recoil-persist": "^4.2.0",
     "store": "^2.0.12",
+    "underscore": "^1.13.4",
     "victory": "^36.5.3",
     "victory-core": "^36.5.3",
     "web-vitals": "^2.1.4"
@@ -50,6 +51,7 @@
     "@types/node": "^18.6.1",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@types/underscore": "^1.11.4",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.20.0",
     "eslint-config-airbnb": "^19.0.4",
