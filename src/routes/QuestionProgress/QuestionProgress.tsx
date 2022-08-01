@@ -123,6 +123,12 @@ const QuestionProgress = () => {
   };
 
   const isQuestionFinish = () => {
+    if (!questionValue) {
+      openModal();
+
+      return;
+    }
+
     addCurrentValue();
     addIncorrectNote();
     addTotalScore();
