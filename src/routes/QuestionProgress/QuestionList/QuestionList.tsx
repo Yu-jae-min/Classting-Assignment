@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import QuestionButton from 'components/QuestionCard/QuestionCard';
+import QuestionCard from 'components/QuestionCard/QuestionCard';
 
 import { IQuestionListType } from 'types/types';
 
@@ -33,7 +33,7 @@ const QuestionList = (props: IQuestionListType) => {
         const checkCorrect = isShowCorrect && questionCardValue === questionList[questionCount]?.correct_answer;
 
         return (
-          <QuestionButton
+          <QuestionCard
             key={key}
             value={questionCardValue}
             onClick={activeQuestionCard}
@@ -41,7 +41,7 @@ const QuestionList = (props: IQuestionListType) => {
             isCorrect={checkCorrect}
           >
             {questionCardValue}
-          </QuestionButton>
+          </QuestionCard>
         );
       })}
     </div>

@@ -1,7 +1,7 @@
 import cx from 'classnames';
 
 import Button from 'components/Button/Button';
-import QuestionButton from 'components/QuestionCard/QuestionCard';
+import QuestionCard from 'components/QuestionCard/QuestionCard';
 import Warning, { ErrorMessage } from 'components/Warning/Warning';
 
 import useNavigation from 'hooks/useNavigation';
@@ -37,10 +37,10 @@ const IncorrectNote = () => {
               return (
                 <div className={styles.itemList} key={key}>
                   <h1 className={styles.title}>{question}</h1>
-                  <QuestionButton disabled>{correct}</QuestionButton>
-                  <QuestionButton disabled>{incorrect[0]}</QuestionButton>
-                  <QuestionButton disabled>{incorrect[1]}</QuestionButton>
-                  <QuestionButton disabled>{incorrect[2]}</QuestionButton>
+                  <QuestionCard disabled>{correct}</QuestionCard>
+                  <QuestionCard disabled>{incorrect[0]}</QuestionCard>
+                  <QuestionCard disabled>{incorrect[1]}</QuestionCard>
+                  <QuestionCard disabled>{incorrect[2]}</QuestionCard>
                 </div>
               );
             })}
