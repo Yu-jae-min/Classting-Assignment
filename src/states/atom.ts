@@ -17,15 +17,6 @@ export const incorrectCountState = selector({
   },
 });
 
-// export const queryLengthState = selector({
-//   key: "queryLength",
-//   get: ({ get }) => {
-//     const length = get(searchQueryState).length;
-//     // if (length === 0) return "No Query";
-//     return length;
-//   }
-// });
-
 export const timeCountState = atom({
   key: 'timeCountState',
   default: 0,

@@ -146,9 +146,9 @@ const QuestionProgress = () => {
           <ProgressList questionCount={questionCount} title={questionList[questionCount]?.question} />
           <QuestionList
             questionValue={questionValue}
-            isShowCorrect={isShowCorrect}
             questionList={questionList}
             questionCount={questionCount}
+            isShowCorrect={isShowCorrect}
             activeQuestionCard={activeQuestionCard}
           />
           <ButtonList
