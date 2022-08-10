@@ -50,7 +50,7 @@ export interface IButtonType {
   desc: string;
   size: 'large' | 'normal' | 'small';
   onClick?: MouseEventHandler | FormEventHandler;
-  isActive?: boolean;
+  isActive?: boolean | string;
   disabled?: boolean;
 }
 
@@ -60,8 +60,9 @@ export interface IWarningType {
 
 export interface IButtonListType {
   limitQuestion: boolean;
-  isActive: boolean;
-  goToPage: MouseEventHandler;
+  isActive: boolean | string;
+  goToNextQuestion: MouseEventHandler;
   isQuestionFinish: MouseEventHandler;
   openCorrect: MouseEventHandler;
+  resetIncorrectNoteList: MouseEventHandler | FormEventHandler;
 }

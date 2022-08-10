@@ -12,9 +12,10 @@ const fnValue = jest.fn();
 const ButtonListProps = {
   limitQuestion: false,
   isActive: false,
-  goToPage: fnValue,
+  goToNextQuestion: fnValue,
   isQuestionFinish: fnValue,
   openCorrect: fnValue,
+  resetIncorrectNoteList: fnValue,
 };
 
 describe('<ButtonList />', () => {

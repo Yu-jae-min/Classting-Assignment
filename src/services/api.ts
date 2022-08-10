@@ -11,3 +11,7 @@ export const getQuizListApi = (params: IGetQuizListApiType) => {
     },
   });
 };
+
+export const getTestApi = () => {
+  return axios.get('/data/quiz.json');
+};

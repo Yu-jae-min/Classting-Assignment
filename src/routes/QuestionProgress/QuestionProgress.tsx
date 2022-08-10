@@ -18,6 +18,8 @@ import { IQuestionItemType } from 'types/types';
 
 import styles from './questionProgress.module.scss';
 
+let incorrectNoteList: IQuestionItemType[] = [];
+
 const QuestionProgress = () => {
   const [isModal, setModal] = useState<boolean>(false);
   const [isError, setError] = useState<boolean>(false);
@@ -27,7 +29,6 @@ const QuestionProgress = () => {
   const [questionValue, setQuestionValue] = useState<string>('');
   const [questionCount, setQuestionCount] = useState<number>(0);
   const [questionList, setQuizList] = useState<IQuestionItemType[]>([]);
-  const [incorrectNoteList, setIncorrectNoteList] = useState<IQuestionItemType[]>([]);
 
   const [correctCount, setCorrectCount] = useRecoilState(correctCountState);
   const [totalScore, setTotalScore] = useRecoilState(totalScoreState);
@@ -63,7 +64,7 @@ const QuestionProgress = () => {
     setModal((prev) => !prev);
   };
 
-  const goToPage = () => {
+  const goToNextQuestion = () => {
     if (limitQuestion) return;
 
     if (!questionValue) {
@@ -96,7 +97,7 @@ const QuestionProgress = () => {
     const checkCorrect = questionValue === questionList[questionCount]?.correct_answer;
 
     if (checkCorrect) setCorrectCount((prev) => prev + 1);
-    if (!checkCorrect) setIncorrectNoteList((prev: IQuestionItemType[]) => [...prev, questionList[questionCount]]);
+    if (!checkCorrect) incorrectNoteList.push(questionList[questionCount]);
   };
 
   const addIncorrectNote = () => {
@@ -110,6 +111,11 @@ const QuestionProgress = () => {
     });
 
     setIncorrectNote(deduplication);
+    resetIncorrectNoteList();
+  };
+
+  const resetIncorrectNoteList = () => {
+    incorrectNoteList = [];
   };
 
   const goToFinish = () => {
@@ -153,9 +159,10 @@ const QuestionProgress = () => {
           />
           <ButtonList
             limitQuestion={limitQuestion}
-            goToPage={goToPage}
-            isActive={Boolean(questionValue)}
+            goToNextQuestion={goToNextQuestion}
+            isActive={questionValue}
             isQuestionFinish={isQuestionFinish}
+            resetIncorrectNoteList={resetIncorrectNoteList}
             openCorrect={openCorrect}
           />
         </div>

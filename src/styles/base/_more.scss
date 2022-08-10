@@ -59,7 +59,7 @@ button {
   border: 0;
 
   &:disabled {
-    cursor: not-allowed;
+    cursor: initial;
   }
 }
 
